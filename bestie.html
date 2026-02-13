@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bestie 💜</title>
+  <style>
+    body {
+      background: #f3e8ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #4b0082;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #e0cfff;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #ffffffcc;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .timeline {
+      margin-top: 20px;
+      border-left: 3px solid #4b0082;
+      padding-left: 20px;
+    }
+    .timeline div {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .timeline div::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #4b0082;
+      border-radius: 50%;
+    }
+    button {
+      background: #b19cd9;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      color: white;
+    }
+    button:hover {
+      background: #9b59b6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💜 My Bestie 💜</h1>
+    <p>Because she’s the best human in the world 🌸</p>
+  </header>
+
+  <section>
+    <h2>Why She’s My Favorite Human</h2>
+    <ul>
+      <li>Always makes me laugh 😄</li>
+      <li>Supports me no matter what 💪</li>
+      <li>Secretly super smart ✨</li>
+      <li>Kindest heart ever 💖</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Secret Compliment Generator</h2>
+    <p id="compliment">Click the button to see a secret compliment!</p>
+    <button onclick="generateCompliment()">Reveal 💌</button>
+  </section>
+
+  <section>
+    <h2>Our Story Timeline</h2>
+    <div class="timeline">
+      <div><strong>Met:</strong> First day at school 😁</div>
+      <div><strong>Funny Moment:</strong> That time we got lost together 😂</div>
+      <div><strong>Memory:</strong> Late night talks 🌙</div>
+      <div><strong>Future Dream:</strong> Travel together ✈️</div>
+    </div>
+  </section>
+
+  <script>
+    const compliments = [
+      "You’re literally sunshine 🌞",
+      "You make life sweeter 🍭",
+      "You are loved more than you know 💖",
+      "Your laugh is my favorite sound 😄",
+      "You’re secretly a magical unicorn 🦄"
+    ];
+
+    function generateCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById('compliment').textContent = compliments[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
